@@ -6,7 +6,7 @@ class Solution(object):
         """
         temp = x
         reverse=0
-        while (temp):
+        while (temp>0):
             dig = temp%10
             reverse = reverse*10 + dig
             temp = temp/10
@@ -15,4 +15,5 @@ class Solution(object):
         else:
             return False
         
-# Getting "Time Limit Exceeded" on LeetCode
+        
+
