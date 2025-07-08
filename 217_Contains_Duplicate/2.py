@@ -9,5 +9,3 @@ class Solution(object):
                 temp.add(i)
         return ans
 
-# Working for basic test cases but TLE for large inputs.
-# Complexity is O(n) for time and O(n) for space.
