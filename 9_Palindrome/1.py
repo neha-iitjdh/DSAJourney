@@ -14,6 +14,8 @@ class Solution(object):
             return True
         else:
             return False
+
+# Complexity is O(log10(n)) for time and O(1) for space.
         
         
 
