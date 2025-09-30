@@ -9,23 +9,34 @@ class Solution:
         #     new_num = new_num*10 +dig
         #     x = int(x/10)
         # return sign*new_num if (-2147483648 <= sign*new_num <= 2147483647) else 0
-        int_max = 2**31
-        int_min = -2**31
-        if x > int_max:
-            return 0
-        if x < int_min:
-            return 0
+        #Approach 2
+        # int_max = 2**31
+        # int_min = -2**31
+        # if x > int_max:
+        #     return 0
+        # if x < int_min:
+        #     return 0
 
-        sign = 1
-        if x < 0:
-            sign = -1
-        x_abs = str(abs(x))
+        # sign = 1
+        # if x < 0:
+        #     sign = -1
+        # x_abs = str(abs(x))
         
 
-        rev = x_abs[::-1]
-        x_rev=  sign* int(rev)
-        if x_rev > int_max:
-            return 0
-        if x_rev < int_min:
-            return 0
-        return x_rev
+        # rev = x_abs[::-1]
+        # x_rev=  sign* int(rev)
+        # if x_rev > int_max:
+        #     return 0
+        # if x_rev < int_min:
+        #     return 0
+        # return x_rev
+        #Approach 3
+        a=str(abs(x))
+        xs=int(a[::-1])
+        if xs<=2147483647 and xs>=-2147483648:
+            if x<0:
+                return (xs)*-1
+            else:
+                return (xs)
+        else:
+            return 0 
