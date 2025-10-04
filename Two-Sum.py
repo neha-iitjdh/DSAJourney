@@ -17,13 +17,20 @@ class Solution:
         #         result.append(temp.index(nums[fp]))
         #         result.append(temp.index(nums[lp]))
         #         return result
-        result=[]
-        for i in range(len(nums)):
-            comple = target-nums[i]
-            if comple in nums[i+1:]:
-                result.append(i)
-                result.append(nums[i+1:].index(comple)+1+i)
-                return result
+        #Approach 2
+        # result=[]
+        # for i in range(len(nums)):
+        #     comple = target-nums[i]
+        #     if comple in nums[i+1:]:
+        #         result.append(i)
+        #         result.append(nums[i+1:].index(comple)+1+i)
+        #         return result
+        seen = {}
+        for i, num in enumerate(nums):
+            if (target - num) in seen:
+                return [seen[target - num], i]
+            seen[num] = i
+        return None
 
 
                 
