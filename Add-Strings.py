@@ -11,7 +11,7 @@
 11            total = digit1 + digit2 + carry
 12            carry = total // 10
 13            digit = total % 10
-14            result = result + (str(digit))
+14            result+=(str(digit))
 15            i -= 1
 16            j -= 1
 17        return result[::-1]
